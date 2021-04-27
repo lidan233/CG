@@ -1,5 +1,20 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/lidan/CLionProjects/CG
+/home/lidan/Desktop/clion-2020.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lidan/Desktop/CG/CG
 -- include LidanBase.cmake
+-- include LidanBuild.cmake
+-- Add /home/lidan/Desktop/CG/CG/geometry;
+-- /home/lidan/Desktop/CG/CG/geometry/Particle.cpp/home/lidan/Desktop/CG/CG/geometry/Particle.h
+-- Add /home/lidan/Desktop/CG/CG/math;
+-- /home/lidan/Desktop/CG/CG/math/EigenLidan.h/home/lidan/Desktop/CG/CG/math/MathLidan.h/home/lidan/Desktop/CG/CG/math/SolveMatrix.h/home/lidan/Desktop/CG/CG/math/util.h
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Using X11 for window creation
+-- ----------
+-- /home/lidan/Desktop/CG/CG/external/glad/   
+-- /home/lidan/Desktop/CG/CG/external/glad
+-- Add /home/lidan/Desktop/CG/CG/external/glad/include;
+-- /home/lidan/Desktop/CG/CG/external/glad/include/KHR/khrplatform.h/home/lidan/Desktop/CG/CG/external/glad/include/glad/glad.h
+-- Add /home/lidan/Desktop/CG/CG/external/glad/src
+-- /home/lidan/Desktop/CG/CG/external/glad/src/glad.cpp
+-- using mac/linux external
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/lidan/CLionProjects/CG/cmake-build-debug
+-- Build files have been written to: /home/lidan/Desktop/CG/CG/cmake-build-debug

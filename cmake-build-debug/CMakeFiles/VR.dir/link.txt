@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/VR.dir/main.cpp.o CMakeFiles/VR.dir/geometry/Particle.cpp.o  -o VR   -L/usr/local/Cellar/sdl2/2.0.9_1/lib  -Wl,-rpath,/usr/local/Cellar/sdl2/2.0.9_1/lib external/imgui/libimgui.a -lglfw3 -lSDL2 
