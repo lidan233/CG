@@ -4,10 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidan/Desktop/CG/CG/geometry/Particle.cpp" "/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles/VR.dir/geometry/Particle.cpp.o"
+  "/home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp" "/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o"
   "/home/lidan/Desktop/CG/CG/main.cpp" "/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles/VR.dir/main.cpp.o"
+  "/home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp" "/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "SPDLOG_COMPILED_LIB"
+  )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

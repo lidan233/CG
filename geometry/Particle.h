@@ -12,8 +12,8 @@ class Point{
     Vec3 pos;
     int id ;
     double tx, ty, tz;
-    int i, j, k;
-    bool isInGridCell = false;
+    int x,y,z;
+    bool isInBox = false;
     bool isMarkedForRemoval = false;
 };
 
@@ -64,14 +64,53 @@ class Obstacle{
 
 class Box{
 private:
-    std:vector<Point*> points ;
+    std::vector<Point*> points ;
 public:
-    Box() ;
-    void reset() ;
-    void intial(int i , int j , int k) ;
-    void addPoint(Point* a) ;
-    void rmPoint(Point* a) ;
-    bool isEmpty() ;
+    int x, y, z ;
+    std::vector<Box*> neighbors ;
+
+    Box():x(0),y(0),z(0) {};
+    void reset()
+    {
+        for(int i = 0; i < points.size(); i++)
+        {
+            points[i]->isInBox = false ;
+        }
+        points.clear() ;
+        x = 0 ;
+        y = 0 ;
+        z = 0 ;
+    }
+    void intial(int i , int j , int k):x(i),y(j),z(k) {};
+    void addPoint(Point* a){
+        a->x = x ;
+        a->y = y ;
+        a->z = z ;
+
+        a->isInBox = true ;
+        points.push_back(a) ;
+    } ;
+    void rmPoint(Point* a)
+    {
+        for(auto t = points.begin(); t!=points.end(); t++)
+        {
+            if((*t)->id == a.id)
+            {
+                (*t)->isInBox = false ;
+                points.erase(t) ;
+            }
+        }
+
+    }
+    bool isEmpty()
+    {
+        return points.size() == 0;
+    }
+    std::vector<Point*> getPoints()
+    {
+        return points ;
+    }
+
 };
 
 #endif //CG_PARTICLE_H

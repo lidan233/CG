@@ -5,7 +5,7 @@
 		<Option title="CG"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\external\;CMake Files\external\glfw\;CMake Files\external\glfw\src\;CMake Files\external\glfw\CMake\;CMake Files\external\imgui\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\;CMake Files\external\;CMake Files\external\glfw\;CMake Files\external\glfw\src\;CMake Files\external\glfw\CMake\;CMake Files\external\imgui\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/lidan/Desktop/CG/CG/cmake-build-debug"/>
@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/external/glad/include"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/math"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/geometry"/>
@@ -79,6 +80,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/external/glad/include"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/math"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/geometry"/>
@@ -377,10 +379,13 @@
 		<Unit filename="/home/lidan/Desktop/CG/CG/external/imgui/imgui_widgets.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="/home/lidan/Desktop/CG/CG/geometry/Particle.cpp">
+		<Unit filename="/home/lidan/Desktop/CG/CG/geometry/Particle.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="/home/lidan/Desktop/CG/CG/geometry/Particle.h">
+		<Unit filename="/home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp">
+			<Option target="VR"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/geometry/SpacePartition.h">
 			<Option target="VR"/>
 		</Unit>
 		<Unit filename="/home/lidan/Desktop/CG/CG/main.cpp">
@@ -390,6 +395,12 @@
 			<Option target="VR"/>
 		</Unit>
 		<Unit filename="/home/lidan/Desktop/CG/CG/math/MathLidan.h">
+			<Option target="VR"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp">
+			<Option target="VR"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/math/MatrixCalculation.h">
 			<Option target="VR"/>
 		</Unit>
 		<Unit filename="/home/lidan/Desktop/CG/CG/math/SolveMatrix.h">
@@ -406,6 +417,18 @@
 		</Unit>
 		<Unit filename="/home/lidan/Desktop/CG/CG/cmake/LidanBuild.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfigTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfigTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
 		</Unit>
 		<Unit filename="/home/lidan/Desktop/CG/CG/external/glfw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\external\glfw\"/>

@@ -5,7 +5,7 @@
 		<Option title="GLFW"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\external\;CMake Files\external\glfw\;CMake Files\external\glfw\src\;CMake Files\external\glfw\CMake\;CMake Files\external\imgui\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\;CMake Files\external\;CMake Files\external\glfw\;CMake Files\external\glfw\src\;CMake Files\external\glfw\CMake\;CMake Files\external\imgui\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/lidan/Desktop/CG/CG/cmake-build-debug/external/glfw"/>
@@ -175,6 +175,18 @@
 		</Unit>
 		<Unit filename="/home/lidan/Desktop/CG/CG/cmake/LidanBuild.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfigTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfigTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/lidan/Desktop/CG/CG/../../../../../usr/local/lib/cmake/spdlog/spdlogConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\spdlog\"/>
 		</Unit>
 		<Unit filename="/home/lidan/Desktop/CG/CG/external/glfw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\external\glfw\"/>

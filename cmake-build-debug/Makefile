@@ -228,32 +228,32 @@ imgui/fast:
 	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/build
 .PHONY : imgui/fast
 
-geometry/Particle.o: geometry/Particle.cpp.o
+geometry/SpacePartition.o: geometry/SpacePartition.cpp.o
 
-.PHONY : geometry/Particle.o
+.PHONY : geometry/SpacePartition.o
 
 # target to build an object file
-geometry/Particle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/Particle.cpp.o
-.PHONY : geometry/Particle.cpp.o
+geometry/SpacePartition.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o
+.PHONY : geometry/SpacePartition.cpp.o
 
-geometry/Particle.i: geometry/Particle.cpp.i
+geometry/SpacePartition.i: geometry/SpacePartition.cpp.i
 
-.PHONY : geometry/Particle.i
+.PHONY : geometry/SpacePartition.i
 
 # target to preprocess a source file
-geometry/Particle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/Particle.cpp.i
-.PHONY : geometry/Particle.cpp.i
+geometry/SpacePartition.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/SpacePartition.cpp.i
+.PHONY : geometry/SpacePartition.cpp.i
 
-geometry/Particle.s: geometry/Particle.cpp.s
+geometry/SpacePartition.s: geometry/SpacePartition.cpp.s
 
-.PHONY : geometry/Particle.s
+.PHONY : geometry/SpacePartition.s
 
 # target to generate assembly for a file
-geometry/Particle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/Particle.cpp.s
-.PHONY : geometry/Particle.cpp.s
+geometry/SpacePartition.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/SpacePartition.cpp.s
+.PHONY : geometry/SpacePartition.cpp.s
 
 main.o: main.cpp.o
 
@@ -282,6 +282,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+math/MatrixCalculation.o: math/MatrixCalculation.cpp.o
+
+.PHONY : math/MatrixCalculation.o
+
+# target to build an object file
+math/MatrixCalculation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o
+.PHONY : math/MatrixCalculation.cpp.o
+
+math/MatrixCalculation.i: math/MatrixCalculation.cpp.i
+
+.PHONY : math/MatrixCalculation.i
+
+# target to preprocess a source file
+math/MatrixCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/math/MatrixCalculation.cpp.i
+.PHONY : math/MatrixCalculation.cpp.i
+
+math/MatrixCalculation.s: math/MatrixCalculation.cpp.s
+
+.PHONY : math/MatrixCalculation.s
+
+# target to generate assembly for a file
+math/MatrixCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/math/MatrixCalculation.cpp.s
+.PHONY : math/MatrixCalculation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -298,12 +325,15 @@ help:
 	@echo "... VR"
 	@echo "... glfw"
 	@echo "... imgui"
-	@echo "... geometry/Particle.o"
-	@echo "... geometry/Particle.i"
-	@echo "... geometry/Particle.s"
+	@echo "... geometry/SpacePartition.o"
+	@echo "... geometry/SpacePartition.i"
+	@echo "... geometry/SpacePartition.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... math/MatrixCalculation.o"
+	@echo "... math/MatrixCalculation.i"
+	@echo "... math/MatrixCalculation.s"
 .PHONY : help
 
 

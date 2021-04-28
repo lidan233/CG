@@ -2,9 +2,9 @@
 -- include LidanBase.cmake
 -- include LidanBuild.cmake
 -- Add /home/lidan/Desktop/CG/CG/geometry;
--- /home/lidan/Desktop/CG/CG/geometry/Particle.cpp/home/lidan/Desktop/CG/CG/geometry/Particle.h
+-- /home/lidan/Desktop/CG/CG/geometry/Particle.h/home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp/home/lidan/Desktop/CG/CG/geometry/SpacePartition.h
 -- Add /home/lidan/Desktop/CG/CG/math;
--- /home/lidan/Desktop/CG/CG/math/EigenLidan.h/home/lidan/Desktop/CG/CG/math/MathLidan.h/home/lidan/Desktop/CG/CG/math/SolveMatrix.h/home/lidan/Desktop/CG/CG/math/util.h
+-- /home/lidan/Desktop/CG/CG/math/EigenLidan.h/home/lidan/Desktop/CG/CG/math/MathLidan.h/home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp/home/lidan/Desktop/CG/CG/math/MatrixCalculation.h/home/lidan/Desktop/CG/CG/math/SolveMatrix.h/home/lidan/Desktop/CG/CG/math/util.h
 -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
 -- Using X11 for window creation
 -- ----------

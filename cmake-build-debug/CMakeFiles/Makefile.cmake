@@ -56,6 +56,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/lidan/Desktop/clion-2020.3.3/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/home/lidan/Desktop/clion-2020.3.3/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
   "/home/lidan/Desktop/clion-2020.3.3/bin/cmake/linux/share/cmake-3.17/Modules/WriteBasicConfigVersionFile.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfig.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfigTargets-release.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfigTargets.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfigVersion.cmake"
   )
 
 # The corresponding makefile is:

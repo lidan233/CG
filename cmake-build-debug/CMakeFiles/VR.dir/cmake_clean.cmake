@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/VR.dir/geometry/Particle.cpp.o"
+  "CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o"
   "CMakeFiles/VR.dir/main.cpp.o"
+  "CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o"
   "VR"
   "VR.pdb"
 )

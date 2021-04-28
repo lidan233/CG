@@ -90,33 +90,49 @@ CMakeFiles/VR.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidan/Desktop/CG/CG/main.cpp -o CMakeFiles/VR.dir/main.cpp.s
 
-CMakeFiles/VR.dir/geometry/Particle.cpp.o: CMakeFiles/VR.dir/flags.make
-CMakeFiles/VR.dir/geometry/Particle.cpp.o: ../geometry/Particle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VR.dir/geometry/Particle.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VR.dir/geometry/Particle.cpp.o -c /home/lidan/Desktop/CG/CG/geometry/Particle.cpp
+CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o: CMakeFiles/VR.dir/flags.make
+CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o: ../math/MatrixCalculation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o -c /home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp
 
-CMakeFiles/VR.dir/geometry/Particle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Particle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidan/Desktop/CG/CG/geometry/Particle.cpp > CMakeFiles/VR.dir/geometry/Particle.cpp.i
+CMakeFiles/VR.dir/math/MatrixCalculation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/math/MatrixCalculation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp > CMakeFiles/VR.dir/math/MatrixCalculation.cpp.i
 
-CMakeFiles/VR.dir/geometry/Particle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Particle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidan/Desktop/CG/CG/geometry/Particle.cpp -o CMakeFiles/VR.dir/geometry/Particle.cpp.s
+CMakeFiles/VR.dir/math/MatrixCalculation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/math/MatrixCalculation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp -o CMakeFiles/VR.dir/math/MatrixCalculation.cpp.s
+
+CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o: CMakeFiles/VR.dir/flags.make
+CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o: ../geometry/SpacePartition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o -c /home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp
+
+CMakeFiles/VR.dir/geometry/SpacePartition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/SpacePartition.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp > CMakeFiles/VR.dir/geometry/SpacePartition.cpp.i
+
+CMakeFiles/VR.dir/geometry/SpacePartition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/SpacePartition.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp -o CMakeFiles/VR.dir/geometry/SpacePartition.cpp.s
 
 # Object files for target VR
 VR_OBJECTS = \
 "CMakeFiles/VR.dir/main.cpp.o" \
-"CMakeFiles/VR.dir/geometry/Particle.cpp.o"
+"CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o" \
+"CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o"
 
 # External object files for target VR
 VR_EXTERNAL_OBJECTS =
 
 VR: CMakeFiles/VR.dir/main.cpp.o
-VR: CMakeFiles/VR.dir/geometry/Particle.cpp.o
+VR: CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o
+VR: CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o
 VR: CMakeFiles/VR.dir/build.make
 VR: external/imgui/libimgui.a
+VR: /usr/local/lib/libspdlog.a
 VR: CMakeFiles/VR.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable VR"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable VR"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VR.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
