@@ -8,7 +8,7 @@
 #include <vector>
 
 class Point{
-
+public:
     Vec3 pos;
     int id ;
     double tx, ty, tz;
@@ -22,7 +22,7 @@ class Particle {
 public:
 
     Vec3 pos ;
-    Vec3 ppox ;
+    Vec3 ppos ;
     Vec3 npos ;
 
     Vec3 velocity ;
@@ -33,6 +33,7 @@ public:
     double soundSpeed ;
     double mass ;
     double density ;
+    double densityVelocity;
     double pressure ;
 
     std::vector<Particle*> neighbors ;
@@ -41,7 +42,7 @@ public:
     bool isObstacle ;
     bool isRemoved  = false ;
     bool isVisible = true ;
-    double adistance = 0.0 ;
+    double zdistance = 0.0 ;
 
     Vec3 color ;
     double colorDensity ;
@@ -55,10 +56,42 @@ public:
 
 
 class Obstacle{
+public:
     Vec3 pos ;
     std::vector<Particle*> particles ;
     bool isVisiable = true ;
     int id ;
+};
+
+
+class SPHPartices{
+public:
+    Vec3 position;
+    Vec3 prevPosition;
+    Vec3 velocity;
+    Vec3 velocityAtHalfTimeStep;
+    Vec3 XSPHVelocity;
+    Vec3 acceleration;
+    double soundSpeed;
+    double mass;
+    double density;
+    double densityVelocity;
+    double pressure;
+    std::vector<SPHPartices*> neighbours;
+    int gridID;
+    bool isHalfTimeStepVelocityInitialized;
+    bool isObstacle;
+    bool isMarkedForRemoval = false;
+    bool isVisible = true;
+    double zdistance = 0.0;
+
+    // graphics
+    Vec3 color;
+    double colorDensity;
+    double colorVelocity = 0.0;
+    bool isStuckInBoundary = false;
+    double boundaryAlphaValue = 1.0;
+    double alpha = 1.0;
 };
 
 
@@ -81,7 +114,7 @@ public:
         y = 0 ;
         z = 0 ;
     }
-    void intial(int i , int j , int k):x(i),y(j),z(k) {};
+    void intial(int i , int j , int k) {x = i ; y = j; z = k;};
     void addPoint(Point* a){
         a->x = x ;
         a->y = y ;
@@ -94,13 +127,12 @@ public:
     {
         for(auto t = points.begin(); t!=points.end(); t++)
         {
-            if((*t)->id == a.id)
+            if((*t)->id == a->id)
             {
                 (*t)->isInBox = false ;
                 points.erase(t) ;
             }
         }
-
     }
     bool isEmpty()
     {
@@ -110,7 +142,6 @@ public:
     {
         return points ;
     }
-
 };
 
 #endif //CG_PARTICLE_H

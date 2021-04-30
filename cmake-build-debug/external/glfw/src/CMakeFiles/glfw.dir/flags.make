@@ -6,7 +6,7 @@ C_FLAGS = -g -fPIC   -Wall -std=c99
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/home/lidan/Desktop/CG/CG/external/glfw/include -I/home/lidan/Desktop/CG/CG/external/glfw/src -I/home/lidan/Desktop/CG/CG/cmake-build-debug/external/glfw/src 
+C_INCLUDES = -I/home/lidan/Desktop/CG/CG/math -I/home/lidan/Desktop/CG/CG/geometry -I/home/lidan/Desktop/CG/CG/external/glfw/include -I/home/lidan/Desktop/CG/CG/external/glad/include -I/home/lidan/Desktop/CG/CG/external/SDL -I/home/lidan/Desktop/CG/CG/external/eigen -I/home/lidan/Desktop/CG/CG/external/stb -I/home/lidan/Desktop/CG/CG/external/imgui -I/home/lidan/Desktop/CG/CG/external/imgui/examples -I/home/lidan/Desktop/CG/CG/external/glfw/src -I/home/lidan/Desktop/CG/CG/cmake-build-debug/external/glfw/src 
 
 # Custom flags: external/glfw/src/CMakeFiles/glfw.dir/context.c.o_FLAGS = -Wdeclaration-after-statement
 

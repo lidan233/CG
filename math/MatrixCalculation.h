@@ -7,6 +7,7 @@
 
 #include "EigenLidan.h"
 #include "MathLidan.h"
+#include "Rectangle.h"
 
 class MatrixCalculation {
 public:
@@ -31,6 +32,7 @@ public:
     static void perspective(Lmatrix<double> &result, float fov, float ratio, float zNear, float zFar);
 
     static void lookAt(Lmatrix<double> &result, const Vec3 &eye, const Vec3 &center, const Vec3 &up);
+    static void lookAtglm(Lmatrix<double> &result, const Vec3 &eye, const Vec3 &center, const Vec3 &up);
     static void lookAt(Lmatrix<double> &result, float eyeX, float eyeY, float eyeZ,
                        float centerX, float centerY, float centerZ,
                        float upX, float upY, float upZ);
@@ -52,11 +54,12 @@ public:
     static Lmatrix<double> ortho(float left, float right, float bottom, float top, float zNear, float zFar);
     static Lmatrix<double> frustum(float left, float right, float bottom, float top, float zNear, float zFar);
     static Lmatrix<double> perspective(float fov, float ratio, float zNear, float zFar);
+    static void  perspectiveglm(Lmatrix<double>& res, float fov, float ratio, float zNear, float zFar) ;
     static Lmatrix<double> lookAt(const Vec3 &eye, const Vec3 &center, const Vec3 &up);
     static Lmatrix<double> lookAt(float eyeX, float eyeY, float eyeZ,
                             float centerX, float centerY, float centerZ,
                             float upX, float upY, float upZ);
-    static Lmatrix<double> viewport(const RectangleF<double> &rect);
+//    static Lmatrix<double> viewport(const RectangleF<double> &rect);
     static Lmatrix<double> viewport(float left, float bottom, float width, float height, float zNear, float zFar);
 
     static Lmatrix<double> fromAxisAngle(float angle, float x, float y, float z);

@@ -8,7 +8,7 @@
 #include <fstream>
 #include <vector>
 #include <cmath>
-#include <Lmath.h>
+#include <MathLidan.h>
 #include <complex>
 #include <iostream>
 #include <iomanip> // io manipulator
@@ -21,6 +21,7 @@
 #include <ctype.h>
 #include <type_traits>
 #include <assert.h>
+#include <float.h>
 
 
 using namespace std ;
@@ -74,8 +75,8 @@ inline void Swap(T& a, T& b)
 // note: error Handler
 
 #ifndef _USER_ERROR_CLASS_
-#define throw(message) \
-{ printf(" ERROR: %s/n   in file %s at line %d.\n", message, __FILE__, __LINE__); throw(1); }
+//#define throw(message) \
+//{ printf(" ERROR: %s/n   in file %s at line %d.\n", message, __FILE__, __LINE__); throw(1); }
 #else
 
 struct Lerror{
@@ -292,6 +293,7 @@ public:
     static_assert(is_for_Lvec<T>::value, "type parameter of this class must derive from basic");
     Lvec3() :Lvector<T>(3){}
     Lvec3(T e0, T e1, T e2) ;
+    Lvec3(T e0) ;
     double x() const { return this->data[0]; }
     double y() const { return this->data[1]; }
     double z() const { return this->data[2]; }
@@ -299,6 +301,7 @@ public:
     Lvec3& operator*=(const T t) ;
     Lvec3& operator+=(const Lvec3<T>& t) ;
     Lvec3& operator/=(const T t) ;
+    bool operator==(const Lvec3& rhs) ;
     T length() const ;
     T length_square() const ;
     Lvec3<T> normalized() const;
@@ -323,6 +326,15 @@ Lvec3<T> Lvec3<T>::normalized() const
     T t3 = this->data[2]/length() ;
     Lvec3<T> res(t1,t2,t3) ;
     return res ;
+}
+
+template<class T>
+Lvec3<T>::Lvec3(T e0)
+:Lvector<T>(3)
+{
+    this->data[0] = e0 ;
+    this->data[1] = e0 ;
+    this->data[2] = e0 ;
 }
 
 template<class T>
@@ -359,6 +371,17 @@ Lvec3<T>& Lvec3<T>::operator+=(const Lvec3& t)
     this->data[2] += t[2] ;
 
     return *this ;
+}
+
+template<class T>
+bool  Lvec3<T>::operator==(const Lvec3& rhs)
+{
+    if((*this)[0] == rhs[0] && (*this)[1] == rhs[1]&& (*this)[2] == rhs[2])
+    {
+        return true ;
+    }
+
+    return false ;
 }
 
 template<class T>
@@ -572,7 +595,7 @@ template <class T>
 T Lvec4<T>::length_square() const
 {
     T result = 0 ;
-    for(int i = 0 ; i < size_vector ; i++)  result += this->data[i]*this->data[i] ;
+    for(int i = 0 ; i < this->size_vector ; i++)  result += this->data[i]*this->data[i] ;
     return result ;
 }
 
@@ -602,6 +625,10 @@ public:
     Lmatrix(int m, int n, const T& a) ;
     Lmatrix(int m, int n, const T* a) ;
     Lmatrix(const Lmatrix& rhs) ;
+    template<class U>
+    Lmatrix(const Lmatrix<U>& rhs) ;
+
+    bool operator!=(const Lmatrix& rhs) ;
     Lmatrix & operator=(const Lmatrix &rhs);
     typedef T value_type;
     inline T* operator[](const int i) ;
@@ -613,7 +640,7 @@ public:
 
     T* getData() const { return data[0] ; }
 
-    Lvector<T> row(int index) ;
+    Lvector<T> row(int index) const;
     Lvector<T> col(int index) ;
     void setRow(int index, const Lvector<T>& res) ;
     void setCol(int index, const Lvector<T>& res) ;
@@ -649,8 +676,6 @@ public:
                 if(i == j) data[i][j] = 1.0 ;
                 else data[i][j] = 0.0 ;
     } ;
-
-
 
 
     static void multiply(const Lmatrix<T>& left, const Lmatrix<T>& right,  Lmatrix<T>& result) ;
@@ -707,6 +732,9 @@ public:
 //    return os ;
 //}
 
+
+
+
 template <class T>
 Lmatrix<T>::Lmatrix() : size_matrix_m(0), size_matrix_n(0), data(NULL) {}
 
@@ -737,6 +765,15 @@ Lmatrix<T>::Lmatrix(int m, int n, const T* a) : size_matrix_m(m), size_matrix_n(
 }
 
 
+template<class T>
+template<class U>
+Lmatrix<T>::Lmatrix(const Lmatrix<U>& rhs): size_matrix_m(rhs.mrows()), size_matrix_n(rhs.ncols()), data(size_matrix_m>0 ? new T*[size_matrix_m] : NULL)
+{
+    int i,j,nel= size_matrix_m*size_matrix_n ;
+    if (data) data[0] = nel>0 ? new T[nel] : NULL;
+    for (i=1; i< size_matrix_m; i++) data[i] = data[i-1] + size_matrix_n;
+    for (i=0; i< size_matrix_m; i++) for (j=0; j<size_matrix_n; j++) data[i][j] = rhs[i][j];
+}
 
 template<class T>
 Lmatrix<T>::Lmatrix(const Lmatrix &rhs) : size_matrix_m(rhs.size_matrix_m), size_matrix_n(rhs.size_matrix_n), data(size_matrix_m>0 ? new T*[size_matrix_m] : NULL)
@@ -748,12 +785,22 @@ Lmatrix<T>::Lmatrix(const Lmatrix &rhs) : size_matrix_m(rhs.size_matrix_m), size
     for (i=0; i< size_matrix_m; i++) for (j=0; j<size_matrix_n; j++) data[i][j] = rhs[i][j];
 }
 
+template <class T>
+bool Lmatrix<T>::operator!=(const Lmatrix& rhs)
+{
+    if(this->mrows() != rhs.mrows() || this->ncols() != rhs.ncols()) return true ;
+    for(int i = 0 ; i < this->mrows(); i++ )
+        for( int j = 0 ; j < this->ncols(); j++)
+            if((*this)[i][j]!=rhs[i][j])
+                return true ;
+    return false ;
+}
 
 // other matrix named rhs may has the different size with this matrix
 template <class T>
 Lmatrix<T> & Lmatrix<T>::operator=(const Lmatrix &rhs)
 {
-    if(this != rhs)
+    if((*this) != rhs)
     {
         int i,j,nel ;
         if(size_matrix_m != rhs.size_matrix_m || size_matrix_n != rhs.size_matrix_n)
@@ -845,7 +892,7 @@ void Lmatrix<T>::assign(int newm, int newn, const T& a)
         }
 
         size_matrix_m = newm ;
-        size_matrix_n - newn ;
+        size_matrix_n = newn ;
         data = size_matrix_m>0 ? new T*[size_matrix_m] : NULL;
         nel = size_matrix_m*size_matrix_n;
         if (data) data[0] = nel>0 ? new T[nel] : NULL;
@@ -858,13 +905,13 @@ template <class T>
 Lmatrix<T>::~Lmatrix()
 {
     if (data != NULL) {
-        delete[] (data[0]);
+        if (data[0]) delete[] (data[0]);
         delete[] (data);
     }
 }
 
 template <class T>
-Lvector<T> Lmatrix<T>::row(int index)
+Lvector<T> Lmatrix<T>::row(int index) const
 {
     Lvector<T> result(this->ncols()) ;
     for(int i = 0 ; i < this->ncols();i++)
@@ -970,7 +1017,7 @@ void Lmatrix<T>::multiply(const Lvector<T>& left, const Lmatrix<T>& right, Lvect
 template <class T>
 void Lmatrix<T>::multiply(const Lmatrix<T>& left, const Lvector<T>& right, Lvector<T>& result) \
 {
-    assert(right.size_vector == left.size_matrix_n && result.size_vector == left.size_matrix_m) ;
+    assert(right.size() == left.size_matrix_n && result.size() == left.size_matrix_m) ;
     for(int i = 0 ; i < left.mrows() ;i++)
     {
         result[i] = left.row(i).multiply(right) ;
@@ -1022,7 +1069,7 @@ Lvector<T> Lmatrix<T>::multiply(const Lvector<T>& left, const Lmatrix<T>& right 
 template <class T>
 Lvector<T> Lmatrix<T>::multiply(const Lmatrix<T>& left, const Lvector<T>& right )
 {
-    assert(left.size_matrix_n == right.size_vector) ;
+    assert(left.size_matrix_n == right.size()) ;
     Lvector<T> result(left.size_matrix_m) ;
     multiply(left,right,result) ;
     return result ;
@@ -1060,8 +1107,8 @@ template <class T>
 Lmatrix<T> Lmatrix<T>::substract(const Lmatrix<T>& left, const Lmatrix<T>& right)
 {
     Lmatrix<T> res(left.mrows(),left.ncols()) ;
-    substract(left,right,result) ;
-    return result ;
+    substract(left,right,res) ;
+    return res ;
 }
 
 template <class T>
@@ -1080,8 +1127,8 @@ template <class T>
 Lmatrix<T> Lmatrix<T>::add(const Lmatrix<T>& left, const Lmatrix<T>& right)
 {
     Lmatrix<T> res(left.mrows(),left.ncols()) ;
-    add(left,right,result) ;
-    return result ;
+    add(left,right,res) ;
+    return res ;
 }
 
 template <class T>

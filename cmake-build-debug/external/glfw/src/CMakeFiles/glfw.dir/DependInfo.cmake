@@ -30,7 +30,15 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../math"
+  "../geometry"
   "../external/glfw/include"
+  "../external/glad/include"
+  "../external/SDL"
+  "../external/eigen"
+  "../external/stb"
+  "../external/imgui"
+  "../external/imgui/examples"
   "../external/glfw/src"
   "external/glfw/src"
   )

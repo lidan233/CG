@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD
 
-CXX_INCLUDES = -I/home/lidan/Desktop/CG/CG/external/imgui/. -I/home/lidan/Desktop/CG/CG/external/imgui/./backends 
+CXX_INCLUDES = -I/home/lidan/Desktop/CG/CG/math -I/home/lidan/Desktop/CG/CG/geometry -I/home/lidan/Desktop/CG/CG/render -I/home/lidan/Desktop/CG/CG/tools -I/home/lidan/Desktop/CG/CG/simulation -I/home/lidan/Desktop/CG/CG/external/glad/include -I/home/lidan/Desktop/CG/CG/external/SDL -I/home/lidan/Desktop/CG/CG/external/glm -I/home/lidan/Desktop/CG/CG/external/eigen -I/home/lidan/Desktop/CG/CG/external/stb -I/home/lidan/Desktop/CG/CG/external/imgui -I/home/lidan/Desktop/CG/CG/external/imgui/examples -I/home/lidan/Desktop/CG/CG/external/imgui/. -I/home/lidan/Desktop/CG/CG/external/imgui/./backends 
 

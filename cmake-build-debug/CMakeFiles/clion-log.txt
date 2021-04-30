@@ -2,18 +2,16 @@
 -- include LidanBase.cmake
 -- include LidanBuild.cmake
 -- Add /home/lidan/Desktop/CG/CG/geometry;
--- /home/lidan/Desktop/CG/CG/geometry/Particle.h/home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp/home/lidan/Desktop/CG/CG/geometry/SpacePartition.h
+-- /home/lidan/Desktop/CG/CG/geometry/Particle.h/home/lidan/Desktop/CG/CG/geometry/Rectangle.cpp/home/lidan/Desktop/CG/CG/geometry/Rectangle.h/home/lidan/Desktop/CG/CG/geometry/Size.cpp/home/lidan/Desktop/CG/CG/geometry/Size.h/home/lidan/Desktop/CG/CG/geometry/SpacePartition.cpp/home/lidan/Desktop/CG/CG/geometry/SpacePartition.h/home/lidan/Desktop/CG/CG/geometry/Vertex.cpp/home/lidan/Desktop/CG/CG/geometry/Vertex.h
 -- Add /home/lidan/Desktop/CG/CG/math;
--- /home/lidan/Desktop/CG/CG/math/EigenLidan.h/home/lidan/Desktop/CG/CG/math/MathLidan.h/home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp/home/lidan/Desktop/CG/CG/math/MatrixCalculation.h/home/lidan/Desktop/CG/CG/math/SolveMatrix.h/home/lidan/Desktop/CG/CG/math/util.h
--- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
--- Using X11 for window creation
--- ----------
--- /home/lidan/Desktop/CG/CG/external/glad/   
--- /home/lidan/Desktop/CG/CG/external/glad
--- Add /home/lidan/Desktop/CG/CG/external/glad/include;
--- /home/lidan/Desktop/CG/CG/external/glad/include/KHR/khrplatform.h/home/lidan/Desktop/CG/CG/external/glad/include/glad/glad.h
--- Add /home/lidan/Desktop/CG/CG/external/glad/src
--- /home/lidan/Desktop/CG/CG/external/glad/src/glad.cpp
+-- /home/lidan/Desktop/CG/CG/math/EigenLidan.h/home/lidan/Desktop/CG/CG/math/MathLidan.h/home/lidan/Desktop/CG/CG/math/MatrixCalculation.cpp/home/lidan/Desktop/CG/CG/math/MatrixCalculation.h/home/lidan/Desktop/CG/CG/math/SolveMatrix.h/home/lidan/Desktop/CG/CG/math/geometry.h/home/lidan/Desktop/CG/CG/math/util.h
+-- Add /home/lidan/Desktop/CG/CG/render;
+-- /home/lidan/Desktop/CG/CG/render/BufferObject.cpp/home/lidan/Desktop/CG/CG/render/BufferObject.h/home/lidan/Desktop/CG/CG/render/Cam3D.cpp/home/lidan/Desktop/CG/CG/render/Cam3D.h/home/lidan/Desktop/CG/CG/render/EulerAngles.cpp/home/lidan/Desktop/CG/CG/render/EulerAngles.h/home/lidan/Desktop/CG/CG/render/FrameBuffer.cpp/home/lidan/Desktop/CG/CG/render/FrameBuffer.h/home/lidan/Desktop/CG/CG/render/RenderWindow.cpp/home/lidan/Desktop/CG/CG/render/RenderWindow.h/home/lidan/Desktop/CG/CG/render/Sample2D.cpp/home/lidan/Desktop/CG/CG/render/Sample2D.h/home/lidan/Desktop/CG/CG/render/Shader.cpp/home/lidan/Desktop/CG/CG/render/Shader.h/home/lidan/Desktop/CG/CG/render/ShaderInput.h/home/lidan/Desktop/CG/CG/render/ShaderProgram.cpp/home/lidan/Desktop/CG/CG/render/ShaderProgram.h/home/lidan/Desktop/CG/CG/render/Timer.cpp/home/lidan/Desktop/CG/CG/render/Timer.h/home/lidan/Desktop/CG/CG/render/VertexArrayObject.cpp/home/lidan/Desktop/CG/CG/render/VertexArrayObject.h/home/lidan/Desktop/CG/CG/render/Window.cpp/home/lidan/Desktop/CG/CG/render/Window.h/home/lidan/Desktop/CG/CG/render/quaternion.cpp/home/lidan/Desktop/CG/CG/render/quaternion.h
+-- Add /home/lidan/Desktop/CG/CG/tools;
+-- /home/lidan/Desktop/CG/CG/tools/FileReader.h
+-- Add /home/lidan/Desktop/CG/CG/simulation;
+-- /home/lidan/Desktop/CG/CG/simulation/Watch.cpp/home/lidan/Desktop/CG/CG/simulation/Watch.h/home/lidan/Desktop/CG/CG/simulation/cellhash.cpp/home/lidan/Desktop/CG/CG/simulation/cellhash.h/home/lidan/Desktop/CG/CG/simulation/gradients.cpp/home/lidan/Desktop/CG/CG/simulation/gradients.h/home/lidan/Desktop/CG/CG/simulation/simulation.cpp/home/lidan/Desktop/CG/CG/simulation/simulation.h/home/lidan/Desktop/CG/CG/simulation/spatialgrid.cpp/home/lidan/Desktop/CG/CG/simulation/spatialgrid.h
+-- GLM is a header only library, no need to build it. Set the option GLM_TEST_ENABLE with ON to build and run the test bench
 -- using mac/linux external
 -- Configuring done
 -- Generating done

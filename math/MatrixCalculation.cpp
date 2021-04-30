@@ -3,7 +3,8 @@
 //
 
 #include "MatrixCalculation.h"
-
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 void MatrixCalculation::rotate2D(Lmatrix<double> &result, float angle)
 {
@@ -169,6 +170,18 @@ void MatrixCalculation::perspective(Lmatrix<double> &result, float fov, float ra
     result[2][3] = -1.0f;
     result[3][3] = 0.0f;
 }
+void MatrixCalculation::lookAtglm(Lmatrix<double> &result, const Vec3 &eye, const Vec3 &center, const Vec3 &up)
+{
+    glm::mat4 tt = glm::lookAt(glm::vec3(eye[0],eye[1],eye[2]), glm::vec3(center[0],center[1],center[2]) , glm::vec3(up[0],up[1],up[2]));
+//    result = Lmatrix<double>(4,4) ;
+    for(int i = 0 ; i < 4; i++)
+    {
+        for(int j = 0 ; j < 4; j++)
+        {
+            result[i][j] = tt[i][j] ;
+        }
+    }
+}
 
 void MatrixCalculation::lookAt(Lmatrix<double> &result, const Vec3 &eye, const Vec3 &center, const Vec3 &up) {
     Vec3 forward = center - eye;
@@ -331,6 +344,19 @@ Lmatrix<double> MatrixCalculation::frustum(float left, float right, float bottom
     return result;
 }
 
+void  MatrixCalculation::perspectiveglm(Lmatrix<double>& result, float fov, float ratio, float zNear, float zFar)
+{
+//    result = Lmatrix<double>(4,4) ;
+    glm::mat4 projection = glm::perspective(glm::radians(fov), ratio, zNear, zFar);
+    for(int i = 0 ; i < 4; i++)
+    {
+        for(int j = 0 ; j < 4; j++)
+        {
+            result[i][j] = projection[i][j] ;
+        }
+    }
+}
+
 Lmatrix<double> MatrixCalculation::perspective(float fov, float ratio, float zNear, float zFar)
 {
     Lmatrix<double> result;
@@ -357,12 +383,12 @@ Lmatrix<double> MatrixCalculation::lookAt(float eyeX, float eyeY, float eyeZ,
     return result;
 }
 
-Lmatrix<double> MatrixCalculation::viewport(const RectangleF<double> &rect)
-{
-    Lmatrix<double> result;
-    viewport(result, rect);
-    return result;
-}
+//Lmatrix<double> MatrixCalculation::viewport(const RectangleF<double> &rect)
+//{
+//    Lmatrix<double> result;
+//    viewport(result, rect);
+//    return result;
+//}
 
 Lmatrix<double> MatrixCalculation::viewport(float left, float bottom, float width, float height, float zNear, float zFar)
 {

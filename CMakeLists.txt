@@ -1,37 +1,43 @@
 cmake_minimum_required(VERSION 3.14)
 project(CG)
 
+
 set(CMAKE_CXX_STANDARD 14)
+
 
 include(cmake/LidanBase.cmake)
 include(cmake/LidanBuild.cmake)
 
+
 if(NOT TARGET spdlog)
-    # Stand-alone build
     find_package(spdlog REQUIRED)
 endif()
+find_package(glfw3 REQUIRED)
+
+
 
 ADD_SUBSRC(geometrydir geometry)
 ADD_SUBSRC(mathdir math)
-
-
-add_subdirectory(external/glfw)
-add_subdirectory(external/imgui/)
-
-
-Lidan_ADD_SRC(PATH "${CMAKE_CURRENT_SOURCE_DIR}/external/glad/" SOURCEDIR gladsrc)
-
+ADD_SUBSRC(renderdir render)
+ADD_SUBSRC(toolsdir tools)
+ADD_SUBSRC(simulationdir simulation)
 
 include_directories(
         math/
         geometry/
-        external/glfw/include
-        external/glad
+        render/
+        tools/
+        simulation/
+        external/glad/include/
         external/SDL
         external/glm/
         external/eigen/
+        external/stb/
         external/imgui/
         external/imgui/examples)
+
+add_subdirectory(external/imgui/)
+add_subdirectory(external/glm)
 
 
 IF (WIN32)
@@ -45,14 +51,20 @@ else()
 endif()
 
 
-add_executable(VR
+
+
+add_executable(CG
         main.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/external/glad/src/glad.cpp
         ${mathdir}
+        ${toolsdir}
         ${geometrydir}
-        )
+        ${renderdir}
+        ${simulationdir}
+)
 
 
-target_link_libraries(VR imgui glfw3 SDL2 spdlog::spdlog)
+target_link_libraries(CG imgui SDL2 glfw spdlog::spdlog)
 
 
 

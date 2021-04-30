@@ -9,6 +9,28 @@
 #include "MatrixCalculation.h"
 #include "util.h"
 
+const float NYAW         = 180.0f;
+const float NPITCH       =  0.0f;
+const float NSPEED       =  2.5f;
+const float NSENSITIVITY =  2.0f;
+const float NZOOM        =  45.0f;
+
+
+enum NCamera_Movement {
+    ZERO,
+    FORWARD,
+    BACKWARD,
+    LEFT,
+    RIGHT
+};
+
+
+
+template <typename genType>
+genType radians(genType degrees)
+{
+    return degrees * static_cast<genType>(0.01745329251994329576923690768489);
+}
 
 class Cam3D {
 private:
@@ -46,11 +68,11 @@ public:
            Vec3 target = Vec3(0.0,0.0,0.0) ,
            float yaw = NYAW,
            float pitch = NPITCH,
-           float fovy,
-           float nearPlane,
-           float farPlane,
-           float Height,
-           float Width)
+           float fovy = 60,
+           float nearPlane = 1,
+           float farPlane = 100,
+           float Height = 600,
+           float Width = 800)
             :MovementSpeed(NSPEED),
              MouseSensitivity(NSENSITIVITY),
              Zoom(NZOOM)
@@ -71,9 +93,9 @@ public:
         updateCameraVectors();
 
 
-        nearW = Math::tan(getFieldOfView(fov)) *near*2 ;
+        nearW = Math::tan(getFieldOfView()) *nearPlane*2 ;
         nearH = nearW / getAspectRatio() ;
-        farW = Math::tan(getFieldOfView(fov)) *far*2 ;
+        farW = Math::tan(getFieldOfView()) *farPlane*2 ;
         farH = farW / getAspectRatio() ;
 
         farLeftDownCorner = Front * farP + Position - Right * farW *0.5 - Up * farH *0.5 ;
@@ -81,22 +103,42 @@ public:
 
     }
 
+    void updateCameraVectors()
+    {
+        // calculate the new Front vector
+        Vec3 front;
+        front[0] = cos(radians(Yaw)) * cos(radians(Pitch));
+        front[1] = sin(radians(Pitch));
+        front[2] = sin(radians(Yaw)) * cos(radians(Pitch));
+        Front = (front).normalized() ;
+        Right = (cross(Front, WorldUp)).normalized() ;  // normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
+        Up    = (cross(Right, Front)).normalized() ;
+        Position = Target - radius * Front ;
+
+//        std::cout<<"Position "<< Position<<std::endl ;
+//        std::cout<<"Front "<< Front<< std::endl ;
+//        std::cout<<"Right "<< Right <<std::endl ;
+//        std::cout<<"Up "<<Up<<std::endl ;
+    }
 
     Lmatrix<double> getViewMatrix()
     {
-        MatrixCalculation::lookAt(view, Position, Target, Up) ;
+        view = Lmatrix<double>(4,4) ;
+//        MatrixCalculation::lookAt(view, Position, Target, Up) ;
+        MatrixCalculation::lookAtglm(view, Position, Target, Up) ;
         return view ;
     }
 
     Lmatrix<double> getProjectionMatrix()
     {
-        MatrixCalculation::perspective(projection, fov, width/height, nearP, farP) ;
+        projection = Lmatrix<double>(4,4) ;
+        MatrixCalculation::perspectiveglm(projection, fov, width/height, nearP, farP) ;
         return projection ;
     }
 
-    Vec3 worldToScreenCoordinates(glm::vec3 p)
+    Vec3 worldToScreenCoordinates(Vec3 p)
     {
-        Vec4 point = Lmatrix<double>::multiply(projection, Lmatrix<double>::multiply(view,Vec4(p))) ;
+        Lvector<double> point = Lmatrix<double>::multiply(projection, Lmatrix<double>::multiply(view,Vec4(p))) ;
         return Vec3(point[0],point[1],point[2]) ;
     }
     Vec3 getPosition()
@@ -165,6 +207,9 @@ public:
 
     float getZoom(){ return Zoom; }
     Vec3 getViewDir() { return Front ; }
+    float getFieldOfView();
+    float getAspectRatio();
+
 
 };
 

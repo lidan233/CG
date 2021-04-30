@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/lidan/Desktop/CG/CG/cmake-build-debug/external/glfw/cmake_install.cmake")
+  include("/home/lidan/Desktop/CG/CG/cmake-build-debug/external/imgui/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/lidan/Desktop/CG/CG/cmake-build-debug/external/imgui/cmake_install.cmake")
+  include("/home/lidan/Desktop/CG/CG/cmake-build-debug/external/glm/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

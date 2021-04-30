@@ -13,6 +13,7 @@ external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.o: ../extern
 external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.o: ../external/imgui/examples/imgui_impl_opengl3.cpp
 external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.o: ../external/imgui/examples/imgui_impl_opengl3.h
 
+external/imgui/CMakeFiles/imgui.dir/imgui.cpp.o: ../external/stb/stb_sprintf.h
 external/imgui/CMakeFiles/imgui.dir/imgui.cpp.o: ../external/imgui/imconfig.h
 external/imgui/CMakeFiles/imgui.dir/imgui.cpp.o: ../external/imgui/imgui.cpp
 external/imgui/CMakeFiles/imgui.dir/imgui.cpp.o: ../external/imgui/imgui.h
@@ -23,6 +24,7 @@ external/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.o: ../external/imgui/imconfig
 external/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.o: ../external/imgui/imgui.h
 external/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.o: ../external/imgui/imgui_demo.cpp
 
+external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.o: ../external/stb/stb_truetype.h
 external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.o: ../external/imgui/imconfig.h
 external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.o: ../external/imgui/imgui.h
 external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.o: ../external/imgui/imgui_draw.cpp

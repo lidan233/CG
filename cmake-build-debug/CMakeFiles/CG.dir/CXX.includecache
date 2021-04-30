@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lidan/Desktop/CG/CG/simulation/Watch.cpp
+Watch.h
+/home/lidan/Desktop/CG/CG/simulation/Watch.h
+
+/home/lidan/Desktop/CG/CG/simulation/Watch.h
+time.h
+-
+

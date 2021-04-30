@@ -35,7 +35,15 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/math"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/geometry"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/external/glfw/include"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/glad/include"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/SDL"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/eigen"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/stb"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/imgui"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/imgui/examples"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/external/glfw/src"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/cmake-build-debug/external/glfw/src"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -61,7 +69,15 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/math"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/geometry"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/external/glfw/include"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/glad/include"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/SDL"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/eigen"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/stb"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/imgui"/>
+					<Add directory="/home/lidan/Desktop/CG/CG/external/imgui/examples"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/external/glfw/src"/>
 					<Add directory="/home/lidan/Desktop/CG/CG/cmake-build-debug/external/glfw/src"/>
 					<Add directory="/usr/include/c++/9"/>

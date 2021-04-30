@@ -14,8 +14,8 @@ private:
     double size ;
     int id ;
     std::vector<Point*> points ;
-    std::unorder_map<int, Point*> id2point ;
-    std::vector<
+    std::unordered_map<int, Point*> id2point ;
+//    std::vector<
 public:
     SpacePartition() ;
     SpacePartition(double size) ;

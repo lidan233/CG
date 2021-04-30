@@ -73,61 +73,183 @@ CMAKE_BINARY_DIR = /home/lidan/Desktop/CG/CG/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/VR.dir/all
-all: external/glfw/all
+all: CMakeFiles/CG.dir/all
 all: external/imgui/all
+all: external/glm/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: external/glfw/preinstall
 preinstall: external/imgui/preinstall
+preinstall: external/glm/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/VR.dir/clean
-clean: external/glfw/clean
+clean: CMakeFiles/CG.dir/clean
 clean: external/imgui/clean
+clean: external/glm/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory external/glfw
+# Directory level rules for directory external/glm
 
 # Recursive "all" directory target.
-external/glfw/all: external/glfw/src/all
+external/glm/all: external/glm/glm/all
+external/glm/all: external/glm/test/all
+external/glm/all: external/glm/util/all
 
-.PHONY : external/glfw/all
+.PHONY : external/glm/all
 
 # Recursive "preinstall" directory target.
-external/glfw/preinstall: external/glfw/src/preinstall
+external/glm/preinstall: external/glm/glm/preinstall
+external/glm/preinstall: external/glm/test/preinstall
+external/glm/preinstall: external/glm/util/preinstall
 
-.PHONY : external/glfw/preinstall
+.PHONY : external/glm/preinstall
 
 # Recursive "clean" directory target.
-external/glfw/clean: external/glfw/CMakeFiles/uninstall.dir/clean
-external/glfw/clean: external/glfw/src/clean
+external/glm/clean: external/glm/glm/clean
+external/glm/clean: external/glm/test/clean
+external/glm/clean: external/glm/util/clean
 
-.PHONY : external/glfw/clean
+.PHONY : external/glm/clean
 
 #=============================================================================
-# Directory level rules for directory external/glfw/src
+# Directory level rules for directory external/glm/glm
 
 # Recursive "all" directory target.
-external/glfw/src/all: external/glfw/src/CMakeFiles/glfw.dir/all
+external/glm/glm/all:
 
-.PHONY : external/glfw/src/all
+.PHONY : external/glm/glm/all
 
 # Recursive "preinstall" directory target.
-external/glfw/src/preinstall:
+external/glm/glm/preinstall:
 
-.PHONY : external/glfw/src/preinstall
+.PHONY : external/glm/glm/preinstall
 
 # Recursive "clean" directory target.
-external/glfw/src/clean: external/glfw/src/CMakeFiles/glfw.dir/clean
+external/glm/glm/clean:
 
-.PHONY : external/glfw/src/clean
+.PHONY : external/glm/glm/clean
+
+#=============================================================================
+# Directory level rules for directory external/glm/test
+
+# Recursive "all" directory target.
+external/glm/test/all: external/glm/test/bug/all
+external/glm/test/all: external/glm/test/core/all
+external/glm/test/all: external/glm/test/gtc/all
+external/glm/test/all: external/glm/test/gtx/all
+
+.PHONY : external/glm/test/all
+
+# Recursive "preinstall" directory target.
+external/glm/test/preinstall: external/glm/test/bug/preinstall
+external/glm/test/preinstall: external/glm/test/core/preinstall
+external/glm/test/preinstall: external/glm/test/gtc/preinstall
+external/glm/test/preinstall: external/glm/test/gtx/preinstall
+
+.PHONY : external/glm/test/preinstall
+
+# Recursive "clean" directory target.
+external/glm/test/clean: external/glm/test/bug/clean
+external/glm/test/clean: external/glm/test/core/clean
+external/glm/test/clean: external/glm/test/gtc/clean
+external/glm/test/clean: external/glm/test/gtx/clean
+
+.PHONY : external/glm/test/clean
+
+#=============================================================================
+# Directory level rules for directory external/glm/test/bug
+
+# Recursive "all" directory target.
+external/glm/test/bug/all:
+
+.PHONY : external/glm/test/bug/all
+
+# Recursive "preinstall" directory target.
+external/glm/test/bug/preinstall:
+
+.PHONY : external/glm/test/bug/preinstall
+
+# Recursive "clean" directory target.
+external/glm/test/bug/clean:
+
+.PHONY : external/glm/test/bug/clean
+
+#=============================================================================
+# Directory level rules for directory external/glm/test/core
+
+# Recursive "all" directory target.
+external/glm/test/core/all:
+
+.PHONY : external/glm/test/core/all
+
+# Recursive "preinstall" directory target.
+external/glm/test/core/preinstall:
+
+.PHONY : external/glm/test/core/preinstall
+
+# Recursive "clean" directory target.
+external/glm/test/core/clean:
+
+.PHONY : external/glm/test/core/clean
+
+#=============================================================================
+# Directory level rules for directory external/glm/test/gtc
+
+# Recursive "all" directory target.
+external/glm/test/gtc/all:
+
+.PHONY : external/glm/test/gtc/all
+
+# Recursive "preinstall" directory target.
+external/glm/test/gtc/preinstall:
+
+.PHONY : external/glm/test/gtc/preinstall
+
+# Recursive "clean" directory target.
+external/glm/test/gtc/clean:
+
+.PHONY : external/glm/test/gtc/clean
+
+#=============================================================================
+# Directory level rules for directory external/glm/test/gtx
+
+# Recursive "all" directory target.
+external/glm/test/gtx/all:
+
+.PHONY : external/glm/test/gtx/all
+
+# Recursive "preinstall" directory target.
+external/glm/test/gtx/preinstall:
+
+.PHONY : external/glm/test/gtx/preinstall
+
+# Recursive "clean" directory target.
+external/glm/test/gtx/clean:
+
+.PHONY : external/glm/test/gtx/clean
+
+#=============================================================================
+# Directory level rules for directory external/glm/util
+
+# Recursive "all" directory target.
+external/glm/util/all:
+
+.PHONY : external/glm/util/all
+
+# Recursive "preinstall" directory target.
+external/glm/util/preinstall:
+
+.PHONY : external/glm/util/preinstall
+
+# Recursive "clean" directory target.
+external/glm/util/clean:
+
+.PHONY : external/glm/util/clean
 
 #=============================================================================
 # Directory level rules for directory external/imgui
@@ -148,85 +270,31 @@ external/imgui/clean: external/imgui/CMakeFiles/imgui.dir/clean
 .PHONY : external/imgui/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/VR.dir
+# Target rules for target CMakeFiles/CG.dir
 
 # All Build rule for target.
-CMakeFiles/VR.dir/all: external/imgui/CMakeFiles/imgui.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target VR"
-.PHONY : CMakeFiles/VR.dir/all
+CMakeFiles/CG.dir/all: external/imgui/CMakeFiles/imgui.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target CG"
+.PHONY : CMakeFiles/CG.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/VR.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/VR.dir/all
+CMakeFiles/CG.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles 33
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CG.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/VR.dir/rule
+.PHONY : CMakeFiles/CG.dir/rule
 
 # Convenience name for target.
-VR: CMakeFiles/VR.dir/rule
+CG: CMakeFiles/CG.dir/rule
 
-.PHONY : VR
-
-# clean rule for target.
-CMakeFiles/VR.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/clean
-.PHONY : CMakeFiles/VR.dir/clean
-
-#=============================================================================
-# Target rules for target external/glfw/CMakeFiles/uninstall.dir
-
-# All Build rule for target.
-external/glfw/CMakeFiles/uninstall.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num= "Built target uninstall"
-.PHONY : external/glfw/CMakeFiles/uninstall.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles 0
-.PHONY : external/glfw/CMakeFiles/uninstall.dir/rule
-
-# Convenience name for target.
-uninstall: external/glfw/CMakeFiles/uninstall.dir/rule
-
-.PHONY : uninstall
+.PHONY : CG
 
 # clean rule for target.
-external/glfw/CMakeFiles/uninstall.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/clean
-.PHONY : external/glfw/CMakeFiles/uninstall.dir/clean
-
-#=============================================================================
-# Target rules for target external/glfw/src/CMakeFiles/glfw.dir
-
-# All Build rule for target.
-external/glfw/src/CMakeFiles/glfw.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target glfw"
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles 17
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles 0
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
-
-# Convenience name for target.
-glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
-
-.PHONY : glfw
-
-# clean rule for target.
-external/glfw/src/CMakeFiles/glfw.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/clean
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/clean
+CMakeFiles/CG.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/clean
+.PHONY : CMakeFiles/CG.dir/clean
 
 #=============================================================================
 # Target rules for target external/imgui/CMakeFiles/imgui.dir
@@ -235,7 +303,7 @@ external/glfw/src/CMakeFiles/glfw.dir/clean:
 external/imgui/CMakeFiles/imgui.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=22,23,24,25,26,27,28,29 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lidan/Desktop/CG/CG/cmake-build-debug/CMakeFiles --progress-num=26,27,28,29,30,31,32,33 "Built target imgui"
 .PHONY : external/imgui/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.

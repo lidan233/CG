@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lidan/Desktop/CG/CG/render/EulerAngles.cpp
+EulerAngles.h
+/home/lidan/Desktop/CG/CG/render/EulerAngles.h
+
+/home/lidan/Desktop/CG/CG/render/EulerAngles.h
+

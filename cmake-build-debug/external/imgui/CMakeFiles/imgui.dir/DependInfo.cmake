@@ -21,6 +21,18 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../math"
+  "../geometry"
+  "../render"
+  "../tools"
+  "../simulation"
+  "../external/glad/include"
+  "../external/SDL"
+  "../external/glm"
+  "../external/eigen"
+  "../external/stb"
+  "../external/imgui"
+  "../external/imgui/examples"
   "../external/imgui/."
   "../external/imgui/./backends"
   )

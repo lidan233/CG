@@ -177,43 +177,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named VR
+# Target rules for targets named CG
 
 # Build rule for target.
-VR: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 VR
-.PHONY : VR
+CG: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CG
+.PHONY : CG
 
 # fast build rule for target.
-VR/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/build
-.PHONY : VR/fast
-
-#=============================================================================
-# Target rules for targets named uninstall
-
-# Build rule for target.
-uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
-.PHONY : uninstall
-
-# fast build rule for target.
-uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
-
-#=============================================================================
-# Target rules for targets named glfw
-
-# Build rule for target.
-glfw: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfw
-.PHONY : glfw
-
-# fast build rule for target.
-glfw/fast:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-.PHONY : glfw/fast
+CG/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/build
+.PHONY : CG/fast
 
 #=============================================================================
 # Target rules for targets named imgui
@@ -228,13 +202,94 @@ imgui/fast:
 	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/build
 .PHONY : imgui/fast
 
+external/glad/src/glad.o: external/glad/src/glad.cpp.o
+
+.PHONY : external/glad/src/glad.o
+
+# target to build an object file
+external/glad/src/glad.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/external/glad/src/glad.cpp.o
+.PHONY : external/glad/src/glad.cpp.o
+
+external/glad/src/glad.i: external/glad/src/glad.cpp.i
+
+.PHONY : external/glad/src/glad.i
+
+# target to preprocess a source file
+external/glad/src/glad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/external/glad/src/glad.cpp.i
+.PHONY : external/glad/src/glad.cpp.i
+
+external/glad/src/glad.s: external/glad/src/glad.cpp.s
+
+.PHONY : external/glad/src/glad.s
+
+# target to generate assembly for a file
+external/glad/src/glad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/external/glad/src/glad.cpp.s
+.PHONY : external/glad/src/glad.cpp.s
+
+geometry/Rectangle.o: geometry/Rectangle.cpp.o
+
+.PHONY : geometry/Rectangle.o
+
+# target to build an object file
+geometry/Rectangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Rectangle.cpp.o
+.PHONY : geometry/Rectangle.cpp.o
+
+geometry/Rectangle.i: geometry/Rectangle.cpp.i
+
+.PHONY : geometry/Rectangle.i
+
+# target to preprocess a source file
+geometry/Rectangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Rectangle.cpp.i
+.PHONY : geometry/Rectangle.cpp.i
+
+geometry/Rectangle.s: geometry/Rectangle.cpp.s
+
+.PHONY : geometry/Rectangle.s
+
+# target to generate assembly for a file
+geometry/Rectangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Rectangle.cpp.s
+.PHONY : geometry/Rectangle.cpp.s
+
+geometry/Size.o: geometry/Size.cpp.o
+
+.PHONY : geometry/Size.o
+
+# target to build an object file
+geometry/Size.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Size.cpp.o
+.PHONY : geometry/Size.cpp.o
+
+geometry/Size.i: geometry/Size.cpp.i
+
+.PHONY : geometry/Size.i
+
+# target to preprocess a source file
+geometry/Size.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Size.cpp.i
+.PHONY : geometry/Size.cpp.i
+
+geometry/Size.s: geometry/Size.cpp.s
+
+.PHONY : geometry/Size.s
+
+# target to generate assembly for a file
+geometry/Size.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Size.cpp.s
+.PHONY : geometry/Size.cpp.s
+
 geometry/SpacePartition.o: geometry/SpacePartition.cpp.o
 
 .PHONY : geometry/SpacePartition.o
 
 # target to build an object file
 geometry/SpacePartition.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/SpacePartition.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/SpacePartition.cpp.o
 .PHONY : geometry/SpacePartition.cpp.o
 
 geometry/SpacePartition.i: geometry/SpacePartition.cpp.i
@@ -243,7 +298,7 @@ geometry/SpacePartition.i: geometry/SpacePartition.cpp.i
 
 # target to preprocess a source file
 geometry/SpacePartition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/SpacePartition.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/SpacePartition.cpp.i
 .PHONY : geometry/SpacePartition.cpp.i
 
 geometry/SpacePartition.s: geometry/SpacePartition.cpp.s
@@ -252,8 +307,35 @@ geometry/SpacePartition.s: geometry/SpacePartition.cpp.s
 
 # target to generate assembly for a file
 geometry/SpacePartition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/geometry/SpacePartition.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/SpacePartition.cpp.s
 .PHONY : geometry/SpacePartition.cpp.s
+
+geometry/Vertex.o: geometry/Vertex.cpp.o
+
+.PHONY : geometry/Vertex.o
+
+# target to build an object file
+geometry/Vertex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Vertex.cpp.o
+.PHONY : geometry/Vertex.cpp.o
+
+geometry/Vertex.i: geometry/Vertex.cpp.i
+
+.PHONY : geometry/Vertex.i
+
+# target to preprocess a source file
+geometry/Vertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Vertex.cpp.i
+.PHONY : geometry/Vertex.cpp.i
+
+geometry/Vertex.s: geometry/Vertex.cpp.s
+
+.PHONY : geometry/Vertex.s
+
+# target to generate assembly for a file
+geometry/Vertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/geometry/Vertex.cpp.s
+.PHONY : geometry/Vertex.cpp.s
 
 main.o: main.cpp.o
 
@@ -261,7 +343,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -270,7 +352,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -279,7 +361,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 math/MatrixCalculation.o: math/MatrixCalculation.cpp.o
@@ -288,7 +370,7 @@ math/MatrixCalculation.o: math/MatrixCalculation.cpp.o
 
 # target to build an object file
 math/MatrixCalculation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/math/MatrixCalculation.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/math/MatrixCalculation.cpp.o
 .PHONY : math/MatrixCalculation.cpp.o
 
 math/MatrixCalculation.i: math/MatrixCalculation.cpp.i
@@ -297,7 +379,7 @@ math/MatrixCalculation.i: math/MatrixCalculation.cpp.i
 
 # target to preprocess a source file
 math/MatrixCalculation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/math/MatrixCalculation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/math/MatrixCalculation.cpp.i
 .PHONY : math/MatrixCalculation.cpp.i
 
 math/MatrixCalculation.s: math/MatrixCalculation.cpp.s
@@ -306,8 +388,467 @@ math/MatrixCalculation.s: math/MatrixCalculation.cpp.s
 
 # target to generate assembly for a file
 math/MatrixCalculation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VR.dir/build.make CMakeFiles/VR.dir/math/MatrixCalculation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/math/MatrixCalculation.cpp.s
 .PHONY : math/MatrixCalculation.cpp.s
+
+render/BufferObject.o: render/BufferObject.cpp.o
+
+.PHONY : render/BufferObject.o
+
+# target to build an object file
+render/BufferObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/BufferObject.cpp.o
+.PHONY : render/BufferObject.cpp.o
+
+render/BufferObject.i: render/BufferObject.cpp.i
+
+.PHONY : render/BufferObject.i
+
+# target to preprocess a source file
+render/BufferObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/BufferObject.cpp.i
+.PHONY : render/BufferObject.cpp.i
+
+render/BufferObject.s: render/BufferObject.cpp.s
+
+.PHONY : render/BufferObject.s
+
+# target to generate assembly for a file
+render/BufferObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/BufferObject.cpp.s
+.PHONY : render/BufferObject.cpp.s
+
+render/Cam3D.o: render/Cam3D.cpp.o
+
+.PHONY : render/Cam3D.o
+
+# target to build an object file
+render/Cam3D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Cam3D.cpp.o
+.PHONY : render/Cam3D.cpp.o
+
+render/Cam3D.i: render/Cam3D.cpp.i
+
+.PHONY : render/Cam3D.i
+
+# target to preprocess a source file
+render/Cam3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Cam3D.cpp.i
+.PHONY : render/Cam3D.cpp.i
+
+render/Cam3D.s: render/Cam3D.cpp.s
+
+.PHONY : render/Cam3D.s
+
+# target to generate assembly for a file
+render/Cam3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Cam3D.cpp.s
+.PHONY : render/Cam3D.cpp.s
+
+render/EulerAngles.o: render/EulerAngles.cpp.o
+
+.PHONY : render/EulerAngles.o
+
+# target to build an object file
+render/EulerAngles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/EulerAngles.cpp.o
+.PHONY : render/EulerAngles.cpp.o
+
+render/EulerAngles.i: render/EulerAngles.cpp.i
+
+.PHONY : render/EulerAngles.i
+
+# target to preprocess a source file
+render/EulerAngles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/EulerAngles.cpp.i
+.PHONY : render/EulerAngles.cpp.i
+
+render/EulerAngles.s: render/EulerAngles.cpp.s
+
+.PHONY : render/EulerAngles.s
+
+# target to generate assembly for a file
+render/EulerAngles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/EulerAngles.cpp.s
+.PHONY : render/EulerAngles.cpp.s
+
+render/FrameBuffer.o: render/FrameBuffer.cpp.o
+
+.PHONY : render/FrameBuffer.o
+
+# target to build an object file
+render/FrameBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/FrameBuffer.cpp.o
+.PHONY : render/FrameBuffer.cpp.o
+
+render/FrameBuffer.i: render/FrameBuffer.cpp.i
+
+.PHONY : render/FrameBuffer.i
+
+# target to preprocess a source file
+render/FrameBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/FrameBuffer.cpp.i
+.PHONY : render/FrameBuffer.cpp.i
+
+render/FrameBuffer.s: render/FrameBuffer.cpp.s
+
+.PHONY : render/FrameBuffer.s
+
+# target to generate assembly for a file
+render/FrameBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/FrameBuffer.cpp.s
+.PHONY : render/FrameBuffer.cpp.s
+
+render/RenderWindow.o: render/RenderWindow.cpp.o
+
+.PHONY : render/RenderWindow.o
+
+# target to build an object file
+render/RenderWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/RenderWindow.cpp.o
+.PHONY : render/RenderWindow.cpp.o
+
+render/RenderWindow.i: render/RenderWindow.cpp.i
+
+.PHONY : render/RenderWindow.i
+
+# target to preprocess a source file
+render/RenderWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/RenderWindow.cpp.i
+.PHONY : render/RenderWindow.cpp.i
+
+render/RenderWindow.s: render/RenderWindow.cpp.s
+
+.PHONY : render/RenderWindow.s
+
+# target to generate assembly for a file
+render/RenderWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/RenderWindow.cpp.s
+.PHONY : render/RenderWindow.cpp.s
+
+render/Sample2D.o: render/Sample2D.cpp.o
+
+.PHONY : render/Sample2D.o
+
+# target to build an object file
+render/Sample2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Sample2D.cpp.o
+.PHONY : render/Sample2D.cpp.o
+
+render/Sample2D.i: render/Sample2D.cpp.i
+
+.PHONY : render/Sample2D.i
+
+# target to preprocess a source file
+render/Sample2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Sample2D.cpp.i
+.PHONY : render/Sample2D.cpp.i
+
+render/Sample2D.s: render/Sample2D.cpp.s
+
+.PHONY : render/Sample2D.s
+
+# target to generate assembly for a file
+render/Sample2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Sample2D.cpp.s
+.PHONY : render/Sample2D.cpp.s
+
+render/Shader.o: render/Shader.cpp.o
+
+.PHONY : render/Shader.o
+
+# target to build an object file
+render/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Shader.cpp.o
+.PHONY : render/Shader.cpp.o
+
+render/Shader.i: render/Shader.cpp.i
+
+.PHONY : render/Shader.i
+
+# target to preprocess a source file
+render/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Shader.cpp.i
+.PHONY : render/Shader.cpp.i
+
+render/Shader.s: render/Shader.cpp.s
+
+.PHONY : render/Shader.s
+
+# target to generate assembly for a file
+render/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Shader.cpp.s
+.PHONY : render/Shader.cpp.s
+
+render/ShaderProgram.o: render/ShaderProgram.cpp.o
+
+.PHONY : render/ShaderProgram.o
+
+# target to build an object file
+render/ShaderProgram.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/ShaderProgram.cpp.o
+.PHONY : render/ShaderProgram.cpp.o
+
+render/ShaderProgram.i: render/ShaderProgram.cpp.i
+
+.PHONY : render/ShaderProgram.i
+
+# target to preprocess a source file
+render/ShaderProgram.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/ShaderProgram.cpp.i
+.PHONY : render/ShaderProgram.cpp.i
+
+render/ShaderProgram.s: render/ShaderProgram.cpp.s
+
+.PHONY : render/ShaderProgram.s
+
+# target to generate assembly for a file
+render/ShaderProgram.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/ShaderProgram.cpp.s
+.PHONY : render/ShaderProgram.cpp.s
+
+render/Timer.o: render/Timer.cpp.o
+
+.PHONY : render/Timer.o
+
+# target to build an object file
+render/Timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Timer.cpp.o
+.PHONY : render/Timer.cpp.o
+
+render/Timer.i: render/Timer.cpp.i
+
+.PHONY : render/Timer.i
+
+# target to preprocess a source file
+render/Timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Timer.cpp.i
+.PHONY : render/Timer.cpp.i
+
+render/Timer.s: render/Timer.cpp.s
+
+.PHONY : render/Timer.s
+
+# target to generate assembly for a file
+render/Timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Timer.cpp.s
+.PHONY : render/Timer.cpp.s
+
+render/VertexArrayObject.o: render/VertexArrayObject.cpp.o
+
+.PHONY : render/VertexArrayObject.o
+
+# target to build an object file
+render/VertexArrayObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/VertexArrayObject.cpp.o
+.PHONY : render/VertexArrayObject.cpp.o
+
+render/VertexArrayObject.i: render/VertexArrayObject.cpp.i
+
+.PHONY : render/VertexArrayObject.i
+
+# target to preprocess a source file
+render/VertexArrayObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/VertexArrayObject.cpp.i
+.PHONY : render/VertexArrayObject.cpp.i
+
+render/VertexArrayObject.s: render/VertexArrayObject.cpp.s
+
+.PHONY : render/VertexArrayObject.s
+
+# target to generate assembly for a file
+render/VertexArrayObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/VertexArrayObject.cpp.s
+.PHONY : render/VertexArrayObject.cpp.s
+
+render/Window.o: render/Window.cpp.o
+
+.PHONY : render/Window.o
+
+# target to build an object file
+render/Window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Window.cpp.o
+.PHONY : render/Window.cpp.o
+
+render/Window.i: render/Window.cpp.i
+
+.PHONY : render/Window.i
+
+# target to preprocess a source file
+render/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Window.cpp.i
+.PHONY : render/Window.cpp.i
+
+render/Window.s: render/Window.cpp.s
+
+.PHONY : render/Window.s
+
+# target to generate assembly for a file
+render/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/Window.cpp.s
+.PHONY : render/Window.cpp.s
+
+render/quaternion.o: render/quaternion.cpp.o
+
+.PHONY : render/quaternion.o
+
+# target to build an object file
+render/quaternion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/quaternion.cpp.o
+.PHONY : render/quaternion.cpp.o
+
+render/quaternion.i: render/quaternion.cpp.i
+
+.PHONY : render/quaternion.i
+
+# target to preprocess a source file
+render/quaternion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/quaternion.cpp.i
+.PHONY : render/quaternion.cpp.i
+
+render/quaternion.s: render/quaternion.cpp.s
+
+.PHONY : render/quaternion.s
+
+# target to generate assembly for a file
+render/quaternion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/render/quaternion.cpp.s
+.PHONY : render/quaternion.cpp.s
+
+simulation/Watch.o: simulation/Watch.cpp.o
+
+.PHONY : simulation/Watch.o
+
+# target to build an object file
+simulation/Watch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/Watch.cpp.o
+.PHONY : simulation/Watch.cpp.o
+
+simulation/Watch.i: simulation/Watch.cpp.i
+
+.PHONY : simulation/Watch.i
+
+# target to preprocess a source file
+simulation/Watch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/Watch.cpp.i
+.PHONY : simulation/Watch.cpp.i
+
+simulation/Watch.s: simulation/Watch.cpp.s
+
+.PHONY : simulation/Watch.s
+
+# target to generate assembly for a file
+simulation/Watch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/Watch.cpp.s
+.PHONY : simulation/Watch.cpp.s
+
+simulation/cellhash.o: simulation/cellhash.cpp.o
+
+.PHONY : simulation/cellhash.o
+
+# target to build an object file
+simulation/cellhash.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/cellhash.cpp.o
+.PHONY : simulation/cellhash.cpp.o
+
+simulation/cellhash.i: simulation/cellhash.cpp.i
+
+.PHONY : simulation/cellhash.i
+
+# target to preprocess a source file
+simulation/cellhash.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/cellhash.cpp.i
+.PHONY : simulation/cellhash.cpp.i
+
+simulation/cellhash.s: simulation/cellhash.cpp.s
+
+.PHONY : simulation/cellhash.s
+
+# target to generate assembly for a file
+simulation/cellhash.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/cellhash.cpp.s
+.PHONY : simulation/cellhash.cpp.s
+
+simulation/gradients.o: simulation/gradients.cpp.o
+
+.PHONY : simulation/gradients.o
+
+# target to build an object file
+simulation/gradients.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/gradients.cpp.o
+.PHONY : simulation/gradients.cpp.o
+
+simulation/gradients.i: simulation/gradients.cpp.i
+
+.PHONY : simulation/gradients.i
+
+# target to preprocess a source file
+simulation/gradients.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/gradients.cpp.i
+.PHONY : simulation/gradients.cpp.i
+
+simulation/gradients.s: simulation/gradients.cpp.s
+
+.PHONY : simulation/gradients.s
+
+# target to generate assembly for a file
+simulation/gradients.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/gradients.cpp.s
+.PHONY : simulation/gradients.cpp.s
+
+simulation/simulation.o: simulation/simulation.cpp.o
+
+.PHONY : simulation/simulation.o
+
+# target to build an object file
+simulation/simulation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/simulation.cpp.o
+.PHONY : simulation/simulation.cpp.o
+
+simulation/simulation.i: simulation/simulation.cpp.i
+
+.PHONY : simulation/simulation.i
+
+# target to preprocess a source file
+simulation/simulation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/simulation.cpp.i
+.PHONY : simulation/simulation.cpp.i
+
+simulation/simulation.s: simulation/simulation.cpp.s
+
+.PHONY : simulation/simulation.s
+
+# target to generate assembly for a file
+simulation/simulation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/simulation.cpp.s
+.PHONY : simulation/simulation.cpp.s
+
+simulation/spatialgrid.o: simulation/spatialgrid.cpp.o
+
+.PHONY : simulation/spatialgrid.o
+
+# target to build an object file
+simulation/spatialgrid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/spatialgrid.cpp.o
+.PHONY : simulation/spatialgrid.cpp.o
+
+simulation/spatialgrid.i: simulation/spatialgrid.cpp.i
+
+.PHONY : simulation/spatialgrid.i
+
+# target to preprocess a source file
+simulation/spatialgrid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/spatialgrid.cpp.i
+.PHONY : simulation/spatialgrid.cpp.i
+
+simulation/spatialgrid.s: simulation/spatialgrid.cpp.s
+
+.PHONY : simulation/spatialgrid.s
+
+# target to generate assembly for a file
+simulation/spatialgrid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/simulation/spatialgrid.cpp.s
+.PHONY : simulation/spatialgrid.cpp.s
 
 # Help Target
 help:
@@ -321,19 +862,80 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... uninstall"
-	@echo "... VR"
-	@echo "... glfw"
+	@echo "... CG"
 	@echo "... imgui"
+	@echo "... external/glad/src/glad.o"
+	@echo "... external/glad/src/glad.i"
+	@echo "... external/glad/src/glad.s"
+	@echo "... geometry/Rectangle.o"
+	@echo "... geometry/Rectangle.i"
+	@echo "... geometry/Rectangle.s"
+	@echo "... geometry/Size.o"
+	@echo "... geometry/Size.i"
+	@echo "... geometry/Size.s"
 	@echo "... geometry/SpacePartition.o"
 	@echo "... geometry/SpacePartition.i"
 	@echo "... geometry/SpacePartition.s"
+	@echo "... geometry/Vertex.o"
+	@echo "... geometry/Vertex.i"
+	@echo "... geometry/Vertex.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... math/MatrixCalculation.o"
 	@echo "... math/MatrixCalculation.i"
 	@echo "... math/MatrixCalculation.s"
+	@echo "... render/BufferObject.o"
+	@echo "... render/BufferObject.i"
+	@echo "... render/BufferObject.s"
+	@echo "... render/Cam3D.o"
+	@echo "... render/Cam3D.i"
+	@echo "... render/Cam3D.s"
+	@echo "... render/EulerAngles.o"
+	@echo "... render/EulerAngles.i"
+	@echo "... render/EulerAngles.s"
+	@echo "... render/FrameBuffer.o"
+	@echo "... render/FrameBuffer.i"
+	@echo "... render/FrameBuffer.s"
+	@echo "... render/RenderWindow.o"
+	@echo "... render/RenderWindow.i"
+	@echo "... render/RenderWindow.s"
+	@echo "... render/Sample2D.o"
+	@echo "... render/Sample2D.i"
+	@echo "... render/Sample2D.s"
+	@echo "... render/Shader.o"
+	@echo "... render/Shader.i"
+	@echo "... render/Shader.s"
+	@echo "... render/ShaderProgram.o"
+	@echo "... render/ShaderProgram.i"
+	@echo "... render/ShaderProgram.s"
+	@echo "... render/Timer.o"
+	@echo "... render/Timer.i"
+	@echo "... render/Timer.s"
+	@echo "... render/VertexArrayObject.o"
+	@echo "... render/VertexArrayObject.i"
+	@echo "... render/VertexArrayObject.s"
+	@echo "... render/Window.o"
+	@echo "... render/Window.i"
+	@echo "... render/Window.s"
+	@echo "... render/quaternion.o"
+	@echo "... render/quaternion.i"
+	@echo "... render/quaternion.s"
+	@echo "... simulation/Watch.o"
+	@echo "... simulation/Watch.i"
+	@echo "... simulation/Watch.s"
+	@echo "... simulation/cellhash.o"
+	@echo "... simulation/cellhash.i"
+	@echo "... simulation/cellhash.s"
+	@echo "... simulation/gradients.o"
+	@echo "... simulation/gradients.i"
+	@echo "... simulation/gradients.s"
+	@echo "... simulation/simulation.o"
+	@echo "... simulation/simulation.i"
+	@echo "... simulation/simulation.s"
+	@echo "... simulation/spatialgrid.o"
+	@echo "... simulation/spatialgrid.i"
+	@echo "... simulation/spatialgrid.s"
 .PHONY : help
 
 
