@@ -10,4 +10,4 @@
 链接:https://pan.baidu.com/s/1_h76rsHdelb44MrdIlhZUQ  密码:un1a
 
 2. 流体模拟（简单SPH）
-链接:https://pan.baidu.com/s/1zkOtLsvvn87ddkclT6KVKA  密码:2y8mhttps://github.com/lidan233/CG
+链接:https://pan.baidu.com/s/1zkOtLsvvn87ddkclT6KVKA  密码:2y8m
