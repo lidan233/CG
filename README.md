@@ -1,13 +1,13 @@
-# CG
+#CG
 
 ##
-这是一个计算机动画的程序
+This is a computer animation program
 
 ##
-你可以在该链接下欣赏视频
+You can enjoy the video under this link
 
-1. metaball(类似于终结者挨枪子的效果）
-链接:https://pan.baidu.com/s/1_h76rsHdelb44MrdIlhZUQ  密码:un1a
+1. metaball (similar to the effect of a Terminator being shot)
+Link: https://pan.baidu.com/s/1_h76rsHdelb44MrdIlhZUQ Password: un1a
 
-2. 流体模拟（简单SPH）
-链接:https://pan.baidu.com/s/1zkOtLsvvn87ddkclT6KVKA  密码:2y8m
+2. Fluid simulation (simple SPH)
+Link: https://pan.baidu.com/s/1zkOtLsvvn87ddkclT6KVKA Password: 2y8m
